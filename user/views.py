@@ -89,7 +89,6 @@ def createProfil(request):
             profil = form.save(commit = False)
             profil.owner = request.user
             profil.save()
-            print("Deneme")
             messages.success(request, 'Profil Oluşturuldu')
             return redirect('profiles')
     context = {
